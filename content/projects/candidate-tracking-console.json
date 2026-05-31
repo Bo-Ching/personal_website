@@ -1,0 +1,24 @@
+{
+  "id": "proj-5",
+  "slug": "candidate-tracking-console",
+  "title": "Candidate Tracking Console",
+  "thumbnail": "/project-recruiting.svg",
+  "summary": "An internal recruiting dashboard for role pipelines, interview stages, and hiring signal summaries.",
+  "content": [
+    "Candidate Tracking Console centralizes recruiting flow so teams can quickly spot stalled applications and priority roles.",
+    "I worked on dashboard composition, interview data visualization, and role-level filtering.",
+    "The project was designed for extensibility, with clean boundaries ready for role-based views and analytics."
+  ],
+  "role": "Product Engineer",
+  "techStack": ["React", "TypeScript", "Node.js", "PostgreSQL"],
+  "tags": ["hrtech", "dashboard", "workflow"],
+  "publishedAt": "2025-09-06",
+  "updatedAt": "2026-01-22",
+  "featured": false,
+  "order": 5,
+  "links": [
+    { "label": "Live", "href": "https://example.com/candidate-console" },
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/candidate-console" }
+  ],
+  "status": "active"
+}

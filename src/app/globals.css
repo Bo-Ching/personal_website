@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f7f4;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --surface: #fdfcf9;
+  --border: #e2e8f0;
+  --radius-card: 0.75rem;
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-card-hover: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", "Inter", "Noto Sans TC", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 108px;
+}
+
+.hero-bounce {
+  animation: bounceArrow 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@layer components {
+  .ui-card {
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    background: #fff;
+    box-shadow: var(--shadow-card);
+  }
+
+  .ui-card-interactive {
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .ui-card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+  }
+}

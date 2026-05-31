@@ -1,0 +1,24 @@
+{
+  "id": "proj-6",
+  "slug": "ai-support-assistant",
+  "title": "AI Support Assistant",
+  "thumbnail": "/project-ai-assistant.svg",
+  "summary": "A support workflow assistant that drafts replies, groups similar tickets, and highlights urgent issues.",
+  "content": [
+    "AI Support Assistant helps support teams reduce response time while keeping quality consistent.",
+    "I integrated intent grouping and draft-reply workflows, then optimized UI states for high-volume queues.",
+    "The architecture keeps inference features modular so new models and prompt strategies can be swapped in safely."
+  ],
+  "role": "AI Product Developer",
+  "techStack": ["Next.js", "TypeScript", "OpenAI API", "Supabase"],
+  "tags": ["ai", "support", "automation"],
+  "publishedAt": "2026-03-18",
+  "updatedAt": "2026-04-30",
+  "featured": false,
+  "order": 6,
+  "links": [
+    { "label": "Case Study", "href": "https://example.com/ai-support-assistant" },
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/ai-support-assistant" }
+  ],
+  "status": "active"
+}

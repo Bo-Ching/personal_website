@@ -1,0 +1,24 @@
+{
+  "id": "proj-4",
+  "slug": "design-system-starter-kit",
+  "title": "Design System Starter Kit",
+  "thumbnail": "/project-design-system.svg",
+  "summary": "A reusable UI foundation with tokenized color, typography, and component primitives for fast product delivery.",
+  "content": [
+    "Design System Starter Kit is a practical baseline for teams that need consistency across multiple products.",
+    "I built the component architecture and token strategy, with a focus on predictable scaling and maintainable patterns.",
+    "The result is a clean foundation that helps teams ship features faster while keeping interface quality stable."
+  ],
+  "role": "Frontend Engineer",
+  "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Storybook"],
+  "tags": ["design-system", "ui", "frontend"],
+  "publishedAt": "2025-10-01",
+  "updatedAt": "2026-02-12",
+  "featured": true,
+  "order": 4,
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/design-system-kit" },
+    { "label": "Case Study", "href": "https://example.com/design-system-kit" }
+  ],
+  "status": "active"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "art-3",
+  "slug": "portfolio-to-cms-driven-site",
+  "title": "From Portfolio to CMS-Driven Site",
+  "summary": "Planned article: migration path from local data files to headless CMS.",
+  "content": [
+    "This upcoming article will map a migration path from local data files to a managed CMS workflow.",
+    "It will include schema strategy, editorial flow, and SEO migration considerations for Next.js App Router."
+  ],
+  "publishedAt": "Coming Soon",
+  "updatedAt": "2026-05-01",
+  "status": "coming_soon",
+  "tags": ["cms", "content", "migration"],
+  "featured": false,
+  "order": 3
+}

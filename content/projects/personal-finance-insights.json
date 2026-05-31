@@ -1,0 +1,24 @@
+{
+  "id": "proj-3",
+  "slug": "personal-finance-insights",
+  "title": "Personal Finance Insights",
+  "thumbnail": "/project-finance.svg",
+  "summary": "A budget analytics tool with category-based trend charts and monthly spending alerts.",
+  "content": [
+    "Personal Finance Insights provides a concise monthly view of budget allocation and spending behavior.",
+    "I built configurable charts and category-level analytics designed for fast scanning on both desktop and mobile.",
+    "The card and detail layout were intentionally prepared for future CMS-backed updates."
+  ],
+  "role": "Product Engineer",
+  "techStack": ["Next.js", "Recharts", "Supabase"],
+  "tags": ["finance", "analytics", "product"],
+  "publishedAt": "2025-11-15",
+  "updatedAt": "2026-01-10",
+  "featured": false,
+  "order": 3,
+  "links": [
+    { "label": "Live", "href": "https://example.com/finance-insights" },
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/finance-insights" }
+  ],
+  "status": "archived"
+}

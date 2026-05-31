@@ -1,0 +1,17 @@
+{
+  "id": "art-2",
+  "slug": "component-boundaries-typescript-react",
+  "title": "Choosing Component Boundaries in TypeScript React Apps",
+  "summary": "A practical guide for deciding when to split components and where business logic should live.",
+  "content": [
+    "Choosing component boundaries is often the fastest way to improve maintainability in React applications.",
+    "This piece demonstrates how to split cards, sections, and layout concerns while preserving strong TypeScript contracts.",
+    "You also get patterns for scaling from a one-page site to multi-route content surfaces."
+  ],
+  "publishedAt": "2026-03-08",
+  "updatedAt": "2026-03-10",
+  "status": "published",
+  "tags": ["react", "typescript", "frontend"],
+  "featured": true,
+  "order": 2
+}

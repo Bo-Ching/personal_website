@@ -1,0 +1,24 @@
+{
+  "id": "proj-2",
+  "slug": "smart-study-planner",
+  "title": "Smart Study Planner",
+  "thumbnail": "/project-study.svg",
+  "summary": "A planner that generates weekly study schedules with priority balancing and progress tracking.",
+  "content": [
+    "Smart Study Planner helps users convert long-term goals into practical weekly plans with prioritization rules.",
+    "I handled both client and server features, including data models for plans, progress snapshots, and reminders.",
+    "The project emphasized clarity and maintainability, with typed APIs and modular domain logic."
+  ],
+  "role": "Full-Stack Developer",
+  "techStack": ["React", "Node.js", "PostgreSQL", "Prisma"],
+  "tags": ["edtech", "full-stack", "planner"],
+  "publishedAt": "2026-01-08",
+  "updatedAt": "2026-03-02",
+  "featured": true,
+  "order": 2,
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/study-planner" },
+    { "label": "Case Study", "href": "https://example.com/study-planner-case" }
+  ],
+  "status": "active"
+}

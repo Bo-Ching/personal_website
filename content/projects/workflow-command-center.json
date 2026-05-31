@@ -1,0 +1,24 @@
+{
+  "id": "proj-1",
+  "slug": "workflow-command-center",
+  "title": "Workflow Command Center",
+  "thumbnail": "/project-workflow.svg",
+  "summary": "A management dashboard for tracking project milestones, blockers, and release health in one view.",
+  "content": [
+    "Workflow Command Center is a dashboard product concept designed for teams that need shared visibility across delivery milestones.",
+    "I led the frontend implementation, focusing on reusable modules for charts, timeline tracking, and risk indicators.",
+    "The architecture uses component-level composition to keep future detail pages and filtering views easy to extend."
+  ],
+  "role": "Frontend Lead",
+  "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js"],
+  "tags": ["dashboard", "frontend", "visualization"],
+  "publishedAt": "2026-02-14",
+  "updatedAt": "2026-04-20",
+  "featured": true,
+  "order": 1,
+  "links": [
+    { "label": "Live", "href": "https://example.com/workflow-command-center" },
+    { "label": "GitHub", "href": "https://github.com/Bo-Ching/workflow-center" }
+  ],
+  "status": "active"
+}

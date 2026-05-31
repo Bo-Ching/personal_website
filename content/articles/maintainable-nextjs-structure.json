@@ -1,0 +1,17 @@
+{
+  "id": "art-1",
+  "slug": "maintainable-nextjs-structure",
+  "title": "Designing Maintainable Next.js Project Structures",
+  "summary": "How to separate UI, domain data, and types so a portfolio can scale into a full product.",
+  "content": [
+    "This article explains a practical way to separate UI rendering, domain types, and content data in modern Next.js projects.",
+    "It covers tradeoffs in file organization and how to avoid coupling data definitions directly to section components.",
+    "The goal is to keep early-stage prototypes easy to evolve into production-grade systems."
+  ],
+  "publishedAt": "2026-04-12",
+  "updatedAt": "2026-04-16",
+  "status": "published",
+  "tags": ["nextjs", "architecture", "typescript"],
+  "featured": true,
+  "order": 1
+}
