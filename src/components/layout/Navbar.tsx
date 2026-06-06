@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   BookOpenText,
   FileUser,
@@ -13,7 +13,11 @@ import {
   X,
 } from "lucide-react";
 import { profile } from "@/data/profile";
-import { queueSectionScroll, scrollToSection } from "@/lib/scroll";
+import {
+  getHomeSectionHref,
+  queueSectionScroll,
+  scrollToSection,
+} from "@/lib/scroll";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -27,28 +31,34 @@ const navItems = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   const navigateSection = (sectionId: string) => {
-    if (pathname === "/") {
-      scrollToSection(sectionId);
-      return;
-    }
-
-    queueSectionScroll(sectionId);
-    router.push("/");
+    scrollToSection(sectionId);
   };
+
+  const isHomePage = pathname === "/";
 
   return (
     <header className="fixed inset-x-0 top-3 z-50 px-4 sm:px-6">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between rounded-full border border-border bg-background/95 px-4 shadow-sm backdrop-blur sm:px-6 lg:px-8">
-        <button
-          type="button"
-          onClick={() => navigateSection("home")}
-          className="text-sm font-semibold tracking-tight text-slate-900"
-        >
-          {profile.name}
-        </button>
+        {isHomePage ? (
+          <button
+            type="button"
+            onClick={() => navigateSection("home")}
+            className="text-sm font-semibold tracking-tight text-slate-900"
+          >
+            {profile.name}
+          </button>
+        ) : (
+          <Link
+            href={getHomeSectionHref()}
+            scroll={false}
+            onClick={() => queueSectionScroll("home")}
+            className="text-sm font-semibold tracking-tight text-slate-900"
+          >
+            {profile.name}
+          </Link>
+        )}
 
         <button
           type="button"
@@ -64,14 +74,26 @@ export function Navbar() {
           {navItems.map((item) => (
             <div key={item.label} className="group relative">
               {item.type === "section" ? (
-                <button
-                  type="button"
-                  onClick={() => navigateSection(item.href)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
-                  aria-label={item.label}
-                >
-                  <item.icon size={17} />
-                </button>
+                isHomePage ? (
+                  <button
+                    type="button"
+                    onClick={() => navigateSection(item.href)}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                    aria-label={item.label}
+                  >
+                    <item.icon size={17} />
+                  </button>
+                ) : (
+                  <Link
+                    href={getHomeSectionHref()}
+                    scroll={false}
+                    onClick={() => queueSectionScroll(item.href)}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                    aria-label={item.label}
+                  >
+                    <item.icon size={17} />
+                  </Link>
+                )
               ) : (
                 <Link
                   href={item.href}
@@ -98,19 +120,36 @@ export function Navbar() {
         <div className="flex items-center justify-center gap-2">
           {navItems.map((item) => (
             item.type === "section" ? (
-              <button
-                key={`${item.label}-mobile`}
-                type="button"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
-                aria-label={item.label}
-                title={item.label}
-                onClick={() => {
-                  setOpen(false);
-                  navigateSection(item.href);
-                }}
-              >
-                <item.icon size={17} />
-              </button>
+              isHomePage ? (
+                <button
+                  key={`${item.label}-mobile`}
+                  type="button"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                  aria-label={item.label}
+                  title={item.label}
+                  onClick={() => {
+                    setOpen(false);
+                    navigateSection(item.href);
+                  }}
+                >
+                  <item.icon size={17} />
+                </button>
+              ) : (
+                <Link
+                  key={`${item.label}-mobile`}
+                  href={getHomeSectionHref()}
+                  scroll={false}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                  aria-label={item.label}
+                  title={item.label}
+                  onClick={() => {
+                    setOpen(false);
+                    queueSectionScroll(item.href);
+                  }}
+                >
+                  <item.icon size={17} />
+                </Link>
+              )
             ) : (
               <Link
                 key={`${item.label}-mobile`}

@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
-import { HomeScrollSync } from "@/components/layout/HomeScrollSync";
+import { HomeSectionScrollSync } from "@/components/layout/HomeSectionScrollSync";
 import { ArticlesSection } from "@/components/sections/ArticlesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <HomeScrollSync />
       <HeroSection />
       <main className="mx-auto w-full max-w-7xl px-4 pb-0 sm:px-6 lg:px-8">
         <ProjectsSection projects={projects} />
         <ArticlesSection articles={articles} />
       </main>
+      <HomeSectionScrollSync />
     </div>
   );
 }

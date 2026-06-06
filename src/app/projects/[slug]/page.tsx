@@ -2,11 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { getProjectBySlug } from "@/lib/content";
+import { getProjectBySlug, getProjects } from "@/lib/content";
 
 type ProjectDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export function generateStaticParams() {
+  return getProjects().map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const { slug } = await params;

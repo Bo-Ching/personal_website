@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { consumeQueuedSectionScroll } from "@/lib/scroll";
 
-export function HomeScrollSync() {
+export function HomeSectionScrollSync() {
   useEffect(() => {
     consumeQueuedSectionScroll();
   }, []);

@@ -2,11 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { getArticleBySlug } from "@/lib/content";
+import { getArticleBySlug, getArticles } from "@/lib/content";
 
 type ArticleDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export function generateStaticParams() {
+  return getArticles().map((article) => ({
+    slug: article.slug,
+  }));
+}
 
 export default async function ArticleDetailPage({ params }: ArticleDetailPageProps) {
   const { slug } = await params;

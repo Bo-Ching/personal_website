@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { queueSectionScroll } from "@/lib/scroll";
+import Link from "next/link";
+import { getHomeSectionHref, queueSectionScroll } from "@/lib/scroll";
 
 type BackToHomeSectionLinkProps = {
   sectionId: string;
@@ -14,18 +14,14 @@ export function BackToHomeSectionLink({
   className,
   children,
 }: BackToHomeSectionLinkProps) {
-  const router = useRouter();
-
   return (
-    <button
-      type="button"
+    <Link
+      href={getHomeSectionHref()}
+      scroll={false}
       className={className}
-      onClick={() => {
-        queueSectionScroll(sectionId);
-        router.push("/");
-      }}
+      onClick={() => queueSectionScroll(sectionId)}
     >
       {children}
-    </button>
+    </Link>
   );
 }
